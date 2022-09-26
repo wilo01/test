@@ -1,0 +1,44 @@
+$whiteColor: rgb(220, 220, 220);
+$blackColor: black;
+$mainBackground: #444342;
+$mainText: #dbd8d9;
+$containerText: #ffffff;
+$go2Top: #403f3f;
+$cornerRadius: 2rem;
+$imgRadius: 100%;
+$fontSizeLabel: 1.5rem;
+$fontSizeContent: 1rem;
+$PfontSize: 0.8rem;
+
+@mixin mainStyles {
+    color: $mainText;
+    background-color: $mainBackground;
+    margin: 10px;
+    padding: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: $cornerRadius;
+}
+
+@mixin containerStyles {
+    color: $containerText;
+    background-color: $whiteColor;
+    margin: 10px;
+    padding: 0 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: $cornerRadius;
+}
+
+@mixin footerStyles {
+    border-radius: $cornerRadius;
+    color: $containerText;
+    background-color: $whiteColor;
+    margin: auto;
+    padding: 1% 3%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    max-width: 90%;
+    width: 90%;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    text-align: justify;
+    text-justify: inter-word;
+}

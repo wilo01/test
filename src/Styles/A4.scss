@@ -1,0 +1,92 @@
+$widthConst: 96%;
+$gridGapConst: 20px;
+$h1Font: 0.9rem;
+$phlabelFont: 0.7rem;
+$textHeight: 0.7rem;
+$imgSize: 60%;
+
+@mixin A4 {
+    .container {
+        margin: auto;
+        max-width: $widthConst;
+        width: $widthConst;
+        height: 100%;
+        grid-template-columns: 2fr 3fr;
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    .info,
+    .other {
+        // No box-shadows 
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0px;
+    }
+
+    ul {
+        padding: 0% 0.5rem !important;
+        margin: auto;
+        font-size: $phlabelFont;
+    }
+
+    hr {
+        margin: 0.25rem 1rem;
+    }
+
+    // hr,
+    aside,
+    nav,
+    form,
+    iframe,
+    .menu,
+    .hero,
+    .adslot {
+        display: none;
+    }
+    
+    figure {
+        width: auto;
+        height: auto;
+        margin: auto;
+        display: block;
+        max-width: $imgSize;
+    }
+
+    html, body {
+        line-height: $textHeight;
+        size: A4;
+        max-width: 100%;
+        width: 100%;
+        width: 210mm;
+        height: 297mm;
+        background-image: none;
+    }
+
+    h1 {
+        font-size: $h1Font;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0%;
+    }
+
+    p,
+    h2,
+    h3,
+    h4,
+    label {
+        font-size: $phlabelFont;
+        padding: 0.15rem 0 !important;
+        margin: 0.2em 0 !important;
+    }
+
+    .footer {
+        width: $widthConst;
+        max-width: $widthConst;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0 auto;
+    }
+}
