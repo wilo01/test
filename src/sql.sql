@@ -35,15 +35,7 @@ INSERT INTO km_salaries VALUES (3, '19000');
 INSERT INTO km_salaries VALUES (4, '25000');
 INSERT INTO km_salaries VALUES (5, '24000');
 
--- fetch some values
--- Select * from km_person;
--- Select * from km_departament;
--- Select * from km_salaries;
-select * 
-from km_person as a
-left join km_departament as b on a.departament_id = b.departament_id
-left join km_salaries as c on a.person_id = c.person_id;
-
+-- !! Display results with salary costs from biggest to lowest salary
 select departament_description, sum(salary) as Salary
 from km_person as a
 left join km_departament as b on a.departament_id = b.departament_id
@@ -51,16 +43,23 @@ left join km_salaries as c on a.person_id = c.person_id
 group by departament_description
 order by salary desc;
 
+-- !! Combine tables
+-- select * 
+-- from km_person as a
+-- left join km_departament as b on a.departament_id = b.departament_id
+-- left join km_salaries as c on a.person_id = c.person_id;
 
-select departament_description, salary
-from km_person as a
-left join km_departament as b on a.departament_id = b.departament_id
-left join km_salaries as c on a.person_id = c.person_id
-order by salary desc;
+-- !! Display results with individual salary costs from biggest to lowest salary
+-- select departament_description, salary
+-- from km_person as a
+-- left join km_departament as b on a.departament_id = b.departament_id
+-- left join km_salaries as c on a.person_id = c.person_id
+-- order by salary desc;
 
-select top 1 departament_description, sum(salary) as Salary
-from km_person as a
-left join km_departament as b on a.departament_id = b.departament_id
-left join km_salaries as c on a.person_id = c.person_id
-group by departament_description
-order by salary desc;
+-- !! Display results with bigest salary costs only
+-- select top 1 departament_description, sum(salary) as Salary
+-- from km_person as a
+-- left join km_departament as b on a.departament_id = b.departament_id
+-- left join km_salaries as c on a.person_id = c.person_id
+-- group by departament_description
+-- order by salary desc;
